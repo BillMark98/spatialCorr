@@ -36,3 +36,18 @@ The idea is that the `python` code takes the generated data and plot the figures
 
 This folder contains some example data that you can play with, ranging from the data I used to generate analysis for my thesis, to raytracing data from the 
 `superC`, `Langenfeld` , `Frankfurt` and `Seoul`. For more details, please have a look at the subfolder.
+
+
+*** Important ***
+
+The `data` folder is quite large (2.9GB). If you only want to pull down the code part. It is advisable to use `sparse-checkout`.
+Example:
+
+```bash
+git init
+git remote add -f origin https://github.com/BillMark98/spatialCorr.git
+
+git config core.sparseCheckout true
+echo "codes/" >> .git/info/sparse-checkout
+git pull origin master
+```
